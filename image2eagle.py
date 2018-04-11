@@ -5,7 +5,6 @@
 #                 must be run in Eagle to import image
 
 from PIL import Image, ImageOps
-import math
 import sys
 import argparse
 
