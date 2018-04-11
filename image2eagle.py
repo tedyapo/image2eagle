@@ -60,8 +60,12 @@ if args.primitive != 'l' and args.primitive != 'r':
   parser.print_help()
   sys.exit(2)
 
-# process image as required
-image = Image.open(args.image)
+# read image and process as required
+try:
+  image = Image.open(args.image)
+except IOError:
+  sys.stderr.write('Cannot open input file "%s"\n' % args.image)
+  sys.exit(1)
 image = ImageOps.grayscale(image)
 if args.invert:
   image = ImageOps.invert(image)
@@ -99,7 +103,7 @@ for row in range(0, rows):
                    y_coord(row, rows, args.line_width),
                    x_coord(col-1, args.input_dpi),
                    y_coord(row+1, rows, args.line_width))
-  # render any run that ends at image boundary
+  # render any run that ends at end of row
   if in_run:
     render_run(outfile, args.primitive, args.line_width, 
                x_coord(start_col, args.input_dpi),

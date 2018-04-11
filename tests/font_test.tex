@@ -1,0 +1,29 @@
+\documentclass[pdftex,11pt,a4paper]{memoir}
+\usepackage[11pt]{moresize}
+
+\usepackage{amsmath}
+\usepackage{esint}
+
+\setstocksize{2.125in}{3.625in}
+\settypeblocksize{2in}{3.5in}{*}
+\setpagecc{2in}{3.5in}{*}
+\setulmargins{0.in}{*}{*}
+\setlrmargins{0.in}{*}{*}
+\setheadfoot{0pt}{0pt}
+\settrims{0.0625in}{0.0625in}
+\setheaderspaces{0pt}{*}{*}
+\checkandfixthelayout[fixed]
+\pagestyle{empty}
+
+\begin{document}
+\vspace*{0.1in}
+\hspace{0.in}\begin{minipage}{3in}
+\tiny
+\begin{align*}
+\oiint_{\partial\Omega}\mathbf{E}\cdot d\mathbf{S} &= \frac{1}{\epsilon_0}\iiint_\Omega \rho dV\\
+\oiint_{\partial\Omega}\mathbf{B}\cdot d\mathbf{S} &= 0\\
+\oint_{\partial\Sigma}\mathbf{E}\cdot dl &= -\frac{d}{dt}\iint_{\Sigma}\mathbf{B}\cdot d\mathbf{S}\\
+\oint_{\partial\Sigma}\mathbf{B}\cdot dl &= \mu_0 \iint_{\Sigma}\mathbf{J} \cdot d\mathbf{S} + \mu_0\epsilon_0\frac{d}{dt}\iint_{\Sigma}\mathbf{E}\cdot d\mathbf{S}
+\end{align*}
+\end{minipage}
+\end{document}
