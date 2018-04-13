@@ -2,7 +2,7 @@
 Eagle image importer
 
 image2eagle is a replacement for the "import-bmp" user-language program (ULP) that comes with Autodesk EAGLE.  Its enhanced features include:
-* Reading multipe image formats
+* Reading multiple image formats
 * Conversion from color or grayscale to bitmap
 * Faster than import-bmp
 * May allow higher resolution while maintianing minimum linewidth (see below)
