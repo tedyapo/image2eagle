@@ -10,7 +10,7 @@ image2eagle is a replacement for the "import-bmp" user-language program (ULP) th
 * Outputs line or rectangle primitives (lines have rounded ends; rectangles are square)
 * Doesn't change your grid after importing!
 
-image2eagle accepts high-resolution input images and resizes only in the vertical dimension to use the specified linewidth.  In the horizontal dimension, the output coordinates retain the original image resolution.  Here, you can see the difference on the same text rendered using 2.5mil lines.  The top image was produced by image2eagle and the bottom by import-bmp.  Depending on the board manufacturer, these differences may or may not be visible.  Tests with OSH Park are in progress.
+image2eagle accepts high-resolution input images and resizes only in the vertical dimension to use the specified linewidth.  In the horizontal dimension, the output coordinates retain the original image resolution.  Here, you can see the difference on the same text rendered using 2.5mil rectangles.  The top image was produced by image2eagle and the bottom by import-bmp.  Depending on the board manufacturer, these differences may or may not be visible.  Tests with OSH Park are in progress.
 
 ![400 DPI comparison](/docs/400dpi_comparison.png)
 
