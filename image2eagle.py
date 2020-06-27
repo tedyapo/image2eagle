@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 #
 # image2eagle.py: convert image to Eagle line or rectangle primitives 
 #                 generates an eagle command script (*.scr) which
@@ -102,14 +102,14 @@ def main():
         render_run(outfile, args.primitive, args.line_width, 
                    x_coord(start_col, args.input_dpi),
                    y_coord(row, rows, args.line_width),
-                   x_coord(col-1, args.input_dpi),
+                   x_coord(col, args.input_dpi),
                    y_coord(row+1, rows, args.line_width))
     # render any run that ends at end of row
     if in_run:
       render_run(outfile, args.primitive, args.line_width, 
                  x_coord(start_col, args.input_dpi),
                  y_coord(row, rows, args.line_width),
-                 x_coord(col-1, args.input_dpi),
+                 x_coord(col, args.input_dpi),
                  y_coord(row+1, rows, args.line_width))
 
   # restore previous grid units
