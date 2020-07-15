@@ -52,6 +52,9 @@ def main():
                       help = 'eagle primitive: r = rect (default), l = line',
                       type = str,
                       default = 'r')
+  parser.add_argument('-m', '--mirror',
+                      help = 'mirror image (useful for bottom side)',
+                      action = 'store_true')  
   parser.add_argument('-n', '--invert',
                       help = 'invert input image (black <-> white)',
                       action = 'store_true')
@@ -71,6 +74,8 @@ def main():
   image = ImageOps.grayscale(image)
   if args.invert:
     image = ImageOps.invert(image)
+  if args.mirror:
+    image = ImageOps.mirror(image)    
 
   # rescale image so pixels are line_width tall
   orig_cols, orig_rows = image.size
