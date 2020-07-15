@@ -48,3 +48,6 @@ Depending on your board manufacturer, these differences may vary.
 
 ## Importing
 Once you have created the Eagle scr file, you can import the graphic by running it from the "File/Execute Script.." menu in Eagle.
+
+## See Also
+For some more info, [check out the project on hackaday.io](https://hackaday.io/project/152693-eagle-image-importer)
